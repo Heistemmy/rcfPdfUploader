@@ -1,0 +1,206 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbdddf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Header Styling */
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 150px;  /* Default size for desktop */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+/* Main Uploader Container */
+.uploader-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Style the File Input Label */
+.file-label {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Hide the actual file input */
+.file-input {
+  display: none;
+}
+
+/* Upload Button Style */
+.upload-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #218838;
+}
+
+/* Flexbox Container for PDFs */
+.pdf-list {
+  display: flex;
+  flex-wrap: wrap; /* Wrap PDFs in two columns */
+  gap: 15px; /* Add space between items */
+  margin-top: 15px;
+  justify-content: space-between; /* Spread items between left and right */
+}
+
+/* Each PDF Item */
+.pdf-list .pdf-item {
+  flex: 1 1 48%;  /* Two items per row, each taking about 48% of the width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 45%; /* Ensure minimum width for small screens */
+}
+
+/* Smaller PDF Preview */
+.pdf-list .pdf-item iframe {
+  width: 60px;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+}
+
+/* Download Button */
+.download-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: #333; /* Default text color */
+  margin-top: 20px; /* Space above the footer */
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .uploader-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .pdf-list .pdf-item iframe {
+    width: 50px;
+    height: 70px;
+  }
+
+  .download-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .pdf-list .pdf-item {
+    flex: 1 1 48%; /* Maintain two-column layout for tablets */
+  }
+
+  /* Adjust logo size for tablets */
+  .logo {
+    width: 120px;
+  }
+}
+
+/* Mobile View (Maintain Two-Column Layout) */
+@media (max-width: 480px) {
+  .uploader-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .pdf-list {
+    display: flex; /* Maintain flexbox layout */
+    flex-wrap: wrap; /* Ensure items wrap */
+    justify-content: space-between; /* Spread items left and right */
+  }
+
+  .pdf-list .pdf-item {
+    flex: 1 1 48%;  /* Maintain two items per row */
+    margin-bottom: 10px; /* Add space between rows */
+  }
+
+  .pdf-list .pdf-item iframe {
+    width: 45px;
+    height: 60px;
+  }
+
+  .download-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  /* Adjust logo size for mobile */
+  .logo {
+    width: 100px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}

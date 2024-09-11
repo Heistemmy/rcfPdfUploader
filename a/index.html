@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCF PDF VIEWER</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="rcf1.jpg" alt="Site Logo" class="logo">
+  </header>
+  <div class="uploader-container">
+    <h1>RCF ACADEMIC DEPARTMENT</h1>
+    <p>Select PDF files to upload:</p>
+    <form id="pdfForm">
+      <label for="fileInput" class="file-label">Choose PDF Files</label>
+      <input type="file" id="fileInput" accept="application/pdf" multiple class="file-input" />
+      <button type="submit" class="upload-btn">Upload PDFs</button>
+    </form>
+    <div id="pdfList" class="pdf-list"></div>
+    <footer>
+        <p>&copy; Acad. Dept 2024</p>
+      </footer>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
